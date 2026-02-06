@@ -1,0 +1,93 @@
+/* RESET SEMUA JARAK */
+* {
+    box-sizing: border-box;
+   
+    padding: 0;
+}
+
+html, body {
+    width: 100% !important;
+    overflow-x: hidden !important;
+    background-color: #f0f2f5;
+    /* PAKSA SEMUA ANAK BODY KE TENGAH */
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; 
+    text-align: center;
+}
+
+/* NAVIGASI ATAS */
+#main-nav {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 8px;
+    padding: 20px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+#main-nav a {
+    display: inline-block !important;
+    text-decoration: none;
+    color: #007bff;
+    padding: 8px 12px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* KONTEN TENGAH - KITA PAKSA POSISI NYA */
+.content-wrapper {
+    display: block !important;
+    width: 90% !important;
+    max-width: 800px !important;
+    
+    padding: 30px;
+    margin: 30px 0 !important; /* Margin atas-bawah saja, kiri-kanan dipindah align-items body */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    
+    /* Pastikan teks di dalam tetap rata kiri agar enak dibaca */
+    text-align: left !important;
+    
+    /* Netralkan semua sisa perintah posisi */
+    position: static !important; 
+    float: none !important;
+}
+
+/* TOMBOL NAVIGASI BAWAH */
+.button-container {
+    position: fixed !important;
+    bottom: 25px;
+    left: 0;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    padding: 0 30px !important;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.nav-btn {
+    pointer-events: auto;
+    padding: 12px 25px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Hanya bekerja jika body memiliki class 'halaman-utama' */
+.halaman-utama .content-wrapper {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.halaman-utama .content-wrapper * {
+    text-align: center !important;
+}
